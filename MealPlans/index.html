@@ -1,0 +1,223 @@
+l<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plans - Broccobae</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="main-wrapper">
+            <div class="content">
+                <!-- Header -->
+                <div class="header-wrapper">
+                    <div class="header">
+                        <img class="logo-img" src="../images/logo/icon.png" alt="Broccobae Logo" />
+                        <div class="logo-section">
+                            <div class="logo-text">
+                                <div class="broccobae">broccobae</div>
+                            </div>
+                        </div>
+                        <div class="nav-wrapper">
+                            <div class="navigation">
+                                <div class="nav-item">
+                                    <a href="../index.html" class="home">Home</a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="../Recipes/index.html" class="recipes">Recipes</a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="index.html" class="meal-plans active">Meal Plans</a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="../Cuisines/index.html" class="cuisines">Cuisines</a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="../Community/index.html" class="community">Community</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="main-content">
+                    <div class="content-wrapper">
+                        <!-- Meal Plans Section -->
+                        <div class="meal-plans-section">
+                            <div class="meal-plans-header">
+                                <div class="meal-plans-title">Personalized Vegan Meal Plans</div>
+                                <div class="meal-plans-description">Choose from our carefully crafted meal plans designed to meet your specific dietary goals and lifestyle needs.</div>
+                            </div>
+                            
+                            <!-- Filter Tabs -->
+                            <div class="filter-tabs">
+                                <button class="filter-tab active" data-filter="all">All Plans</button>
+                                <button class="filter-tab" data-filter="high-protein">High-Protein</button>
+                                <button class="filter-tab" data-filter="low-carb">Low Carb</button>
+                                <button class="filter-tab" data-filter="gluten-free">Gluten-Free</button>
+                                <button class="filter-tab" data-filter="budget-friendly">Budget-Friendly</button>
+                                <button class="filter-tab" data-filter="weight-loss">Weight Loss</button>
+                            </div>
+                            
+                            <!-- Meal Plan Grid -->
+                            <div class="meal-plan-grid">
+                                <div class="meal-plan-card" data-category="high-protein">
+                                    <img class="meal-plan-image" src="../images/meal-plans/High_Protein_Vegan_Power.png" alt="High Protein Vegan Power" />
+                                    <div class="meal-plan-content">
+                                        <div class="meal-plan-title">High-Protein Vegan Power</div>
+                                        <div class="meal-plan-description">Build muscle and strength with protein-rich plant-based meals. Perfect for athletes and fitness enthusiasts.</div>
+                                        <div class="meal-plan-features">
+                                            <span class="feature-tag">25-30g protein per meal</span>
+                                            <span class="feature-tag">7-day plan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="meal-plan-card" data-category="low-carb">
+                                    <img class="meal-plan-image" src="../images/meal-plans/Low_Carb_Vegan_Delight.png" alt="Low Carb Vegan Delight" />
+                                    <div class="meal-plan-content">
+                                        <div class="meal-plan-title">Low Carb Vegan Delight</div>
+                                        <div class="meal-plan-description">Enjoy delicious low-carb vegan meals that keep you satisfied while supporting your health goals.</div>
+                                        <div class="meal-plan-features">
+                                            <span class="feature-tag">Under 50g carbs/day</span>
+                                            <span class="feature-tag">14-day plan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="meal-plan-card" data-category="gluten-free">
+                                    <img class="meal-plan-image" src="../images/meal-plans/Gluten_Free_Vegan_Delight.png" alt="Gluten Free Vegan Delight" />
+                                    <div class="meal-plan-content">
+                                        <div class="meal-plan-title">Gluten-Free Vegan Delight</div>
+                                        <div class="meal-plan-description">Completely gluten-free vegan meals that don't compromise on taste or nutrition.</div>
+                                        <div class="meal-plan-features">
+                                            <span class="feature-tag">100% gluten-free</span>
+                                            <span class="feature-tag">10-day plan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="meal-plan-card" data-category="budget-friendly">
+                                    <img class="meal-plan-image" src="../images/meal-plans/Budget_Friendly_Vegan_Eats.png" alt="Budget Friendly Vegan Eats" />
+                                    <div class="meal-plan-content">
+                                        <div class="meal-plan-title">Budget-Friendly Vegan Eats</div>
+                                        <div class="meal-plan-description">Nutritious and delicious vegan meals that won't break the bank. Eat well for less!</div>
+                                        <div class="meal-plan-features">
+                                            <span class="feature-tag">Under $5 per meal</span>
+                                            <span class="feature-tag">21-day plan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="meal-plan-card" data-category="weight-loss">
+                                    <img class="meal-plan-image" src="../images/meal-plans/Weight_Loss_Vegan_Plan.png" alt="Weight Loss Vegan Plan" />
+                                    <div class="meal-plan-content">
+                                        <div class="meal-plan-title">Weight Loss Vegan Plan</div>
+                                        <div class="meal-plan-description">Achieve your weight loss goals with balanced, portion-controlled vegan meals.</div>
+                                        <div class="meal-plan-features">
+                                            <span class="feature-tag">1200-1500 calories</span>
+                                            <span class="feature-tag">28-day plan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Benefits Section -->
+                        <div class="benefits-section">
+                            <div class="benefits-title">Why Choose Our Meal Plans?</div>
+                            <div class="benefits-grid">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">🌱</div>
+                                    <div class="benefit-title">100% Plant-Based</div>
+                                    <div class="benefit-description">All meals are completely vegan and cruelty-free</div>
+                                </div>
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">📋</div>
+                                    <div class="benefit-title">Detailed Shopping Lists</div>
+                                    <div class="benefit-description">Get organized shopping lists for each week</div>
+                                </div>
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">⏰</div>
+                                    <div class="benefit-title">Time-Saving</div>
+                                    <div class="benefit-description">Prep instructions and quick meal options</div>
+                                </div>
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">💪</div>
+                                    <div class="benefit-title">Nutritionally Balanced</div>
+                                    <div class="benefit-description">Designed by nutrition experts</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Advertisement -->
+                        <div class="ad-section">
+                            <div class="ad-header">
+                                <div class="advertisement-title">Advertisement</div>
+                            </div>
+                            <div class="ad-content">
+                                <div class="ad-container">
+                                    <img class="ad-image" src="../images/advertisements/Exclusive_Vegan_Event.png" alt="Vegan Event" />
+                                    <div class="ad-text">
+                                        <div class="ad-title-wrapper">
+                                            <div class="advertisement-subtitle">Exclusive Vegan Event</div>
+                                        </div>
+                                        <div class="ad-bottom">
+                                            <div class="ad-description-wrapper">
+                                                <div class="advertisement-description">Join our exclusive vegan cooking event!</div>
+                                            </div>
+                                            <div class="ad-button">
+                                                <div class="button-content">
+                                                    <div class="cta-button">Learn More</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../Recipes/index.html">Recipes</a></li>
+                                <li><a href="index.html">Meal Plans</a></li>
+                                <li><a href="../Cuisines/index.html">Cuisines</a></li>
+                                <li><a href="../Community/index.html">Community</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Contact</h3>
+                            <p>Email: info@broccobae.com</p>
+                            <p>Phone: (555) 123-4567</p>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Follow Us</h3>
+                            <div class="social-icons">
+                                <a href="#"><img src="../images/icons/Facebook.svg" alt="Facebook"></a>
+                                <a href="#"><img src="../images/icons/Instagram.svg" alt="Instagram"></a>
+                                <a href="#"><img src="../images/icons/Twitter.svg" alt="Twitter"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 Broccobae. All rights reserved.</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>
