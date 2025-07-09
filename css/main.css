@@ -8,7 +8,8 @@
 body {
     font-family: 'Epilogue', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #0D1C14;
+    background: #fff;
 }
 
 .container {
@@ -31,6 +32,9 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
 }
 
 .logo-img {
@@ -47,7 +51,7 @@ body {
 .broccobae {
     font-size: 24px;
     font-weight: 700;
-    color: #2d5016;
+    color: #09713D;
 }
 
 .navigation {
@@ -57,8 +61,9 @@ body {
 
 .nav-item a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
+    color: #0D1C14;
+    font-weight: 600;
+    font-size: 14px;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -66,13 +71,14 @@ body {
 
 .nav-item a:hover,
 .nav-item a.active {
-    background: #2d5016;
+    background: #09713D;
     color: white;
+    text-decoration: none;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+    background: linear-gradient(135deg, #09713D 0%, #4a7c59 100%);
     color: white;
     padding: 4rem 0;
     text-align: center;
@@ -82,18 +88,20 @@ body {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .hero-subtitle {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+    color: white;
 }
 
 .explore-btn {
     display: inline-block;
     background: #fff;
-    color: #2d5016;
+    color: #09713D;
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 50px;
@@ -106,46 +114,37 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* About Section */
-.about-section {
+/* Section Styles */
+.section {
     padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0D1C14;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
-.about-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2d5016;
-    margin-bottom: 1.5rem;
-}
-
-.about-description {
+.section-description {
     font-size: 1.1rem;
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto 3rem;
-    color: #666;
+    color: #09713D;
+    text-align: center;
 }
 
-.featured-recipes-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #2d5016;
-    margin-bottom: 2rem;
-}
-
-/* Recipe Grid */
-.recipes-container,
-.recipe-grid,
-.cuisine-grid {
+/* Grid Layouts */
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
 }
 
-.recipe-card,
-.cuisine-card {
+.card {
     background: white;
     border-radius: 15px;
     overflow: hidden;
@@ -153,40 +152,34 @@ body {
     transition: transform 0.3s ease;
 }
 
-.recipe-card:hover,
-.cuisine-card:hover {
+.card:hover {
     transform: translateY(-5px);
 }
 
-.recipe-image,
-.cuisine-image {
+.card-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.recipe-content,
-.cuisine-content {
+.card-content {
     padding: 1.5rem;
 }
 
-.recipe-title,
-.cuisine-title {
+.card-title {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2d5016;
+    color: #0D1C14;
     margin-bottom: 0.5rem;
 }
 
-.recipe-description,
-.cuisine-description {
-    color: #666;
+.card-description {
+    color: #09713D;
     line-height: 1.6;
 }
 
 /* Filter Tabs */
-.filter-tabs,
-.community-tabs {
+.filter-tabs {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -194,26 +187,20 @@ body {
     flex-wrap: wrap;
 }
 
-.filter-tab,
-.community-tab {
+.filter-tab {
     background: #f5f5f5;
     border: none;
-    padding: 0.8rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 25px;
-    cursor: pointer;
     font-weight: 500;
+    cursor: pointer;
     transition: all 0.3s ease;
+    color: #0D1C14;
 }
 
 .filter-tab.active,
-.community-tab.active {
-    background: #2d5016;
-    color: white;
-}
-
-.filter-tab:hover,
-.community-tab:hover {
-    background: #2d5016;
+.filter-tab:hover {
+    background: #09713D;
     color: white;
 }
 
@@ -224,25 +211,21 @@ body {
     margin: 3rem 0;
 }
 
-.advertisement-title {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #2d5016;
-    margin-bottom: 2rem;
-}
-
 .ad-container {
     display: flex;
     align-items: center;
     gap: 2rem;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .ad-image {
-    width: 200px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -251,68 +234,56 @@ body {
     flex: 1;
 }
 
+.advertisement-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0D1C14;
+    margin-bottom: 1rem;
+}
+
 .advertisement-subtitle {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2d5016;
-    margin-bottom: 1rem;
+    color: #0D1C14;
+    margin-bottom: 0.5rem;
 }
 
 .advertisement-description {
-    color: #666;
+    color: #09713D;
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .cta-button {
-    background: #2d5016;
+    background: #09713D;
     color: white;
-    padding: 0.8rem 1.5rem;
+    padding: 0.75rem 2rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-weight: 600;
     cursor: pointer;
-    font-weight: 500;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background: #1a3009;
+    background: #0a5a2f;
+    transform: translateY(-2px);
 }
 
-/* Section Headers */
-.section-title,
-.recipe-title,
-.cuisines-title,
-.community-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2d5016;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.recipe-description,
-.cuisines-description,
-.community-description {
-    text-align: center;
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-/* Community Section */
-.season-content {
-    margin-top: 2rem;
-}
-
-/* Footer */
+/* Footer Styles */
 .footer {
-    background: #2d5016;
-    color: white;
+    background: #E5E8EB;
     padding: 3rem 0 1rem;
-    margin-top: 4rem;
+    margin-top: auto;
 }
 
 .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -320,8 +291,10 @@ body {
 }
 
 .footer-section h3 {
-    margin-bottom: 1rem;
+    color: #0D1C14;
     font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .footer-section ul {
@@ -333,36 +306,55 @@ body {
 }
 
 .footer-section a {
-    color: #ccc;
+    color: #09713D;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-    color: white;
+    color: #0D1C14;
+    text-decoration: underline;
+}
+
+.footer-section p {
+    color: #0D1C14;
+    margin-bottom: 0.5rem;
 }
 
 .social-icons {
     display: flex;
     gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #09713D;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #0a5a2f;
+    transform: translateY(-2px);
 }
 
 .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     filter: brightness(0) invert(1);
-    transition: filter 0.3s ease;
-}
-
-.social-icons img:hover {
-    filter: brightness(0) invert(0.7);
 }
 
 .footer-bottom {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
     text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #4a7c59;
-    color: #ccc;
+    color: #0D1C14;
 }
 
 /* Responsive Design */
@@ -380,9 +372,11 @@ body {
         font-size: 2rem;
     }
     
-    .recipes-container,
-    .recipe-grid,
-    .cuisine-grid {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .grid {
         grid-template-columns: 1fr;
     }
     
@@ -391,10 +385,18 @@ body {
         text-align: center;
     }
     
-    .filter-tabs,
-    .community-tabs {
-        flex-direction: column;
-        align-items: center;
+    .ad-image {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .filter-tabs {
+        gap: 0.5rem;
+    }
+    
+    .filter-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -407,150 +409,7 @@ body {
         padding: 2rem 0;
     }
     
-    .about-section {
+    .section {
         padding: 2rem 0;
-    }
-}
-
-/* Meal Plans Specific Styles */
-.meal-plans-section {
-    padding: 2rem 0;
-}
-
-.meal-plans-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.meal-plans-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2d5016;
-    margin-bottom: 1rem;
-}
-
-.meal-plans-description {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-.meal-plan-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-.meal-plan-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.meal-plan-card:hover {
-    transform: translateY(-5px);
-}
-
-.meal-plan-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.meal-plan-content {
-    padding: 1.5rem;
-}
-
-.meal-plan-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #2d5016;
-    margin-bottom: 0.8rem;
-}
-
-.meal-plan-description {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.meal-plan-features {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.feature-tag {
-    background: #e8f5e8;
-    color: #2d5016;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* Benefits Section */
-.benefits-section {
-    background: #f8f9fa;
-    padding: 3rem 0;
-    margin: 3rem 0;
-    border-radius: 15px;
-}
-
-.benefits-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #2d5016;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.benefit-card {
-    text-align: center;
-    padding: 1.5rem;
-}
-
-.benefit-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.benefit-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2d5016;
-    margin-bottom: 0.5rem;
-}
-
-.benefit-description {
-    color: #666;
-    line-height: 1.5;
-}
-
-/* Responsive adjustments for meal plans */
-@media (max-width: 768px) {
-    .meal-plan-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .meal-plans-title {
-        font-size: 2rem;
     }
 }

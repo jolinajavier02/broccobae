@@ -4,142 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes - broccobae</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <!-- Header -->
-        <header class="header">
-            <nav class="nav">
-                <div class="logo">broccobae</div>
-                <ul class="nav-links">
-                    <li><a href="#" class="nav-link">Home</a></li>
-                    <li><a href="#" class="nav-link active">Recipes</a></li>
-                    <li><a href="#" class="nav-link">Meal Plans</a></li>
-                    <li><a href="#" class="nav-link">Cuisines</a></li>
-                    <li><a href="#" class="nav-link">Community</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="header-wrapper">
+            <div class="header">
+                <div class="logo-section">
+                    <img class="logo-img" src="Logo_Icon/icon.png" alt="Broccobae Logo" />
+                    <div class="logo-text">
+                        <div class="broccobae">broccobae</div>
+                    </div>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="navigation">
+                        <div class="nav-item">
+                            <a href="../index.html" class="home">Home</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="index.html" class="recipes active">Recipes</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="../Meal_Plans/index.html" class="meal-plans">Meal Plans</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="../Cuisine_Page/index.html" class="cuisines">Cuisines</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="../Community_Page/index.html" class="community">Community</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Main Content -->
         <main class="main-content">
             <!-- Recipe Section -->
-            <section class="recipe-section">
-                <div class="recipe-header">
-                    <h1 class="recipe-title">Recipes</h1>
-                    <p class="recipe-description">Explore our curated collection of plant-based recipes, from quick weeknight dinners to decadent desserts.</p>
-                </div>
+            <section class="section">
+                <div class="section-title">Recipes</div>
+                <div class="section-description">Explore our curated collection of plant-based recipes, from quick weeknight dinners to decadent desserts.</div>
 
                 <!-- Recipe Filter Tabs -->
-                <div class="recipe-tabs">
-                    <div class="tab active">All</div>
-                    <div class="tab">Breakfast</div>
-                    <div class="tab">Lunch</div>
-                    <div class="tab">Dinner</div>
-                    <div class="tab">Dessert</div>
-                    <div class="tab">Smoothie</div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="breakfast">Breakfast</button>
+                    <button class="filter-tab" data-filter="lunch">Lunch</button>
+                    <button class="filter-tab" data-filter="dinner">Dinner</button>
+                    <button class="filter-tab" data-filter="dessert">Dessert</button>
+                    <button class="filter-tab" data-filter="smoothie">Smoothie</button>
                 </div>
 
                 <!-- Recipe Grid -->
-                <div class="recipe-grid">
-                    <div class="recipe-card">
-                        <img src="All_Recipes/Avocado_Toast_with_Everything_Bagel_Seasoning.png" alt="Avocado Toast" class="recipe-image">
-                        <div class="recipe-card-content">
-                            <h3 class="recipe-card-title">Avocado Toast with Everything Bagel Seasoning</h3>
-                            <p class="recipe-card-description">A simple and satisfying breakfast staple.</p>
+                <div class="grid" id="recipe-grid">
+                    <div class="card" data-category="breakfast">
+                        <img src="All_Recipes/Avocado_Toast_with_Everything_Bagel_Seasoning.png" alt="Avocado Toast" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Avocado Toast with Everything Bagel Seasoning</h3>
+                            <p class="card-description">A simple and satisfying breakfast staple with creamy avocado and flavorful seasoning.</p>
                         </div>
                     </div>
                     
-                    <div class="recipe-card">
-                        <img src="All_Recipes/Quinoa _Salad_with_Lemon_Vinaigrette.png" alt="Quinoa Salad" class="recipe-image">
-                        <div class="recipe-card-content">
-                            <h3 class="recipe-card-title">Quinoa Salad with Lemon Vinaigrette</h3>
-                            <p class="recipe-card-description">A refreshing and nutritious salad.</p>
+                    <div class="card" data-category="lunch">
+                        <img src="All_Recipes/Quinoa _Salad_with_Lemon_Vinaigrette.png" alt="Quinoa Salad" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Quinoa Salad with Lemon Vinaigrette</h3>
+                            <p class="card-description">A refreshing and nutritious salad packed with protein and fresh vegetables.</p>
                         </div>
                     </div>
                     
-                    <div class="recipe-card">
-                        <img src="All_Recipes/Spicy_Black_Bean_Burgers.png" alt="Black Bean Burgers" class="recipe-image">
-                        <div class="recipe-card-content">
-                            <h3 class="recipe-card-title">Spicy Black Bean Burgers</h3>
-                            <p class="recipe-card-description">Flavorful and hearty burgers.</p>
+                    <div class="card" data-category="dinner">
+                        <img src="All_Recipes/Spicy_Black_Bean_Burgers.png" alt="Black Bean Burgers" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Spicy Black Bean Burgers</h3>
+                            <p class="card-description">Flavorful and hearty burgers made with black beans and aromatic spices.</p>
                         </div>
                     </div>
                     
-                    <div class="recipe-card">
-                        <img src="All_Recipes/Chocolate_Avocado_Mousse.png" alt="Chocolate Mousse" class="recipe-image">
-                        <div class="recipe-card-content">
-                            <h3 class="recipe-card-title">Chocolate Avocado Mousse</h3>
-                            <p class="recipe-card-description">A rich and creamy dessert.</p>
+                    <div class="card" data-category="dessert">
+                        <img src="All_Recipes/Chocolate_Avocado_Mousse.png" alt="Chocolate Mousse" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Chocolate Avocado Mousse</h3>
+                            <p class="card-description">A rich and creamy dessert that's surprisingly healthy and delicious.</p>
                         </div>
                     </div>
                     
-                    <div class="recipe-card">
-                        <img src="All_Recipes/Avocado_Banana_Smoothie.png" alt="Avocado Banana Smoothie" class="recipe-image">
-                        <div class="recipe-card-content">
-                            <h3 class="recipe-card-title">Avocado Banana Smoothie</h3>
-                            <p class="recipe-card-description">A smooth and nutritious blend of avocado, banana, and spinach.</p>
+                    <div class="card" data-category="smoothie">
+                        <img src="All_Recipes/Avocado_Banana_Smoothie.png" alt="Avocado Banana Smoothie" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Avocado Banana Smoothie</h3>
+                            <p class="card-description">A smooth and nutritious blend of avocado, banana, and spinach for a healthy start.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Advertisement Section -->
-            <section class="advertisement-section">
-                <h2 class="ad-title">Advertisement</h2>
-                <div class="ad-content">
-                    <img src="Advertisement/Exclusive_Vegan_Event.png" alt="Exclusive Vegan Event" class="ad-image">
+            <div class="ad-section">
+                <div class="advertisement-title">Advertisement</div>
+                <div class="ad-container">
+                    <img class="ad-image" src="Advertisement/Exclusive_Vegan_Event.png" alt="Exclusive Vegan Event" />
                     <div class="ad-text">
-                        <h3 class="ad-heading">Exclusive Vegan Event</h3>
-                        <p class="ad-description">Join our exclusive vegan event featuring cooking demos, workshops, and more. Register today!</p>
-                        <button class="ad-button">Register Now</button>
+                        <div class="advertisement-subtitle">Exclusive Vegan Event</div>
+                        <div class="advertisement-description">Join our exclusive vegan event featuring cooking demos, workshops, and more. Register today!</div>
+                        <button class="cta-button">Register Now</button>
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
 
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <a href="#" class="footer-link">About</a>
-                        <a href="#" class="footer-link">Mission</a>
-                        <a href="#" class="footer-link">Values</a>
-                        <a href="#" class="footer-link">Story</a>
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="index.html">Recipes</a></li>
+                            <li><a href="../Meal_Plans/index.html">Meal Plans</a></li>
+                            <li><a href="../Cuisine_Page/index.html">Cuisines</a></li>
+                            <li><a href="../Community_Page/index.html">Community</a></li>
+                        </ul>
                     </div>
-                    <div class="footer-column">
-                        <a href="#" class="footer-link">Private Policy</a>
-                        <a href="#" class="footer-link">Home</a>
-                        <a href="#" class="footer-link">Recipes</a>
-                        <a href="#" class="footer-link">Meal Plans</a>
+                    <div class="footer-section">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Our Values</a></li>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
                     </div>
-                    <div class="footer-column">
-                        <a href="#" class="footer-link">Terms of Service</a>
-                        <div class="contact-info">+8170-1234-5678</div>
-                        <div class="contact-info">broccobae@gmail.com</div>
-                        <div class="contact-info">Saitama, Japan</div>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <p>Email: info@broccobae.com</p>
+                        <p>Phone: +81 70-1234-5678</p>
+                        <p>Location: Saitama, Japan</p>
                     </div>
-                    <div class="footer-column">
-                        <a href="#" class="footer-link">Contact</a>
-                        <a href="#" class="footer-link">Cuisines</a>
-                        <a href="#" class="footer-link">Community</a>
+                    <div class="footer-section">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><img src="Vector/Facebook.svg" alt="Facebook"></a>
+                            <a href="#"><img src="Vector/Instagram.svg" alt="Instagram"></a>
+                            <a href="#"><img src="Vector/Twitter.svg" alt="Twitter"></a>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="social-media">
-                    <div class="social-icon"></div>
-                    <div class="social-icon"></div>
-                    <div class="social-icon"></div>
-                </div>
-                
                 <div class="footer-bottom">
-                    <p class="footer-text">Thank you for Visiting Our Site!<br>gaiarecipe inc.com</p>
-                    <p class="footer-text">@2025 broccobae.com All rights reserved.</p>
+                    <p>&copy; 2024 Broccobae. All rights reserved. Thank you for choosing plant-based nutrition!</p>
                 </div>
             </div>
         </footer>
     </div>
+    
+    <script>
+        // Recipe filter functionality
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Filter recipes
+                const filter = this.getAttribute('data-filter');
+                const cards = document.querySelectorAll('.card');
+                
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
