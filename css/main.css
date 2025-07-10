@@ -84,11 +84,7 @@ body {
 
 /* Hero Section with Background Image */
 .hero-section {
-<<<<<<< HEAD
     background: url('../Homepage/Hero_Background.png') center/cover no-repeat;
-=======
-    background: url('../Homepage/vegan_burger_hero.png') center/cover no-repeat;
->>>>>>> 3012ba16d9e35c54c952c6e0b4382fc793f965f5
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
