@@ -242,11 +242,67 @@ body {
     color: white;
 }
 
-/* Latest Articles Section */
+/* Latest Articles - Horizontal layout without scroll */
+.articles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.article-item-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-item-horizontal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.article-content {
+    flex: 1;
+}
+
+.article-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0D1C14;
+    margin-bottom: 0.5rem;
+}
+
+.article-label {
+    font-size: 0.9rem;
+    color: #09713D;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.article-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.article-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Remove the old scrolling articles container styles */
 .articles-container {
-    max-height: 600px;
-    overflow-y: auto;
-    padding-right: 10px;
+    display: none;
 }
 
 .article-item {
