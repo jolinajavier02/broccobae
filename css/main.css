@@ -83,7 +83,7 @@ body {
 }
 
 /* Hero Section with Background Image - Updated */
-/* Hero Section with Background Image - Left Aligned */
+/* Hero Section with Background Image - Center-Left Aligned */
 .hero-section {
     background: url('../Homepage/Hero_Background.png') center/cover no-repeat;
     background-size: cover;
@@ -92,8 +92,8 @@ body {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
     position: relative;
     padding: 4rem 0;
 }
@@ -121,10 +121,11 @@ body {
 .hero-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.5rem;
-    max-width: 600px;
-    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero-title {
@@ -134,7 +135,7 @@ body {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1.2;
-    text-align: left;
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -143,7 +144,7 @@ body {
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     line-height: 1.4;
-    text-align: left;
+    text-align: center;
 }
 
 .explore-btn {
@@ -157,7 +158,7 @@ body {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    align-self: flex-start;
+    align-self: center;
 }
 
 .explore-btn:hover {
