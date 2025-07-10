@@ -84,7 +84,7 @@ body {
 
 /* Hero Section with Background Image */
 .hero-section {
-    background: linear-gradient(rgba(9, 113, 61, 0.8), rgba(74, 124, 89, 0.8)), url('../Homepage/Hero_Background.png');
+    background: url('../Homepage/hero_background.png') center/cover no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -273,8 +273,8 @@ body {
 
 .article-title {
     font-size: 1.4rem;
-    font-weight: 600;
-    color: #0D1C14;
+    font-weight: 700;
+    color: #09713D;
     margin-bottom: 0.5rem;
 }
 
@@ -289,7 +289,8 @@ body {
 
 .article-description {
     font-size: 1rem;
-    color: #666;
+    color: #09713D;
+    font-weight: 400;
     line-height: 1.6;
 }
 
@@ -625,4 +626,29 @@ body {
     .section {
         padding: 2rem 0;
     }
+}
+
+.hero {
+    background: url('../Homepage/hero_background.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 28, 20, 0.4);
+    z-index: 1;
 }
