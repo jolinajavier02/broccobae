@@ -83,6 +83,7 @@ body {
 }
 
 /* Hero Section with Background Image - Updated */
+/* Hero Section with Background Image - Left Aligned */
 .hero-section {
     background: url('../Homepage/Hero_Background.png') center/cover no-repeat;
     background-size: cover;
@@ -91,9 +92,10 @@ body {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     position: relative;
+    padding: 4rem 0;
 }
 
 .hero-section::before {
@@ -110,15 +112,18 @@ body {
 .hero-container {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.5rem;
+    max-width: 600px;
 }
 
 .hero-title {
@@ -128,6 +133,7 @@ body {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1.2;
+    text-align: left;
 }
 
 .hero-subtitle {
@@ -135,8 +141,8 @@ body {
     margin-bottom: 2rem;
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    max-width: 600px;
     line-height: 1.4;
+    text-align: left;
 }
 
 .explore-btn {
@@ -150,6 +156,7 @@ body {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    align-self: flex-start;
 }
 
 .explore-btn:hover {
@@ -723,4 +730,53 @@ body {
     bottom: 0;
     background: rgba(13, 28, 20, 0.4);
     z-index: 1;
+}
+
+/* Responsive Design for Left Alignment */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+        padding: 3rem 0;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    
+    .hero-content {
+        align-items: flex-start;
+        max-width: 100%;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    
+    .explore-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        min-height: 50vh;
+        padding: 2rem 0;
+        justify-content: flex-start;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        text-align: left;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        text-align: left;
+    }
 }
