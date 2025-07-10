@@ -84,7 +84,7 @@ body {
 
 /* Hero Section with Background Image */
 .hero-section {
-    background: url('../Homepage/hero_background.png') center/cover no-repeat;
+    background: url('../Homepage/vegan_burger_hero.png') center/cover no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -303,7 +303,7 @@ body {
     order: 2;
 }
 
-/* Remove the old scrolling articles container styles */
+/* Remove the duplicate conflicting styles */
 .articles-container {
     display: none;
 }
