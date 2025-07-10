@@ -242,6 +242,111 @@ body {
     color: white;
 }
 
+/* Latest Articles Section */
+.articles-container {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.article-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.article-content {
+    flex: 1;
+}
+
+.article-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.article-label {
+    font-size: 0.875rem;
+    color: #4a90e2;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.article-description {
+    font-size: 0.95rem;
+    color: #718096;
+    line-height: 1.5;
+}
+
+.article-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* Scrollbar styling for articles container */
+.articles-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.articles-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.articles-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.articles-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+.card-description {
+    color: #09713D;
+    line-height: 1.6;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.filter-tab {
+    background: #f5f5f5;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #0D1C14;
+}
+
+.filter-tab.active,
+.filter-tab:hover {
+    background: #09713D;
+    color: white;
+}
+
 /* Advertisement Section - No background colors */
 .ad-section {
     padding: 3rem 0;
