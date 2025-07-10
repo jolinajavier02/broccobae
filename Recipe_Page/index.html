@@ -164,22 +164,32 @@
         // Recipe filter functionality
         document.querySelectorAll('.filter-tab').forEach(tab => {
             tab.addEventListener('click', function() {
-                // Remove active class from all tabs
-                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                this.classList.add('active');
-                
-                // Filter recipes
                 const filter = this.getAttribute('data-filter');
-                const cards = document.querySelectorAll('.card');
                 
-                cards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                // Navigate to category pages for specific categories
+                if (filter === 'breakfast') {
+                    window.location.href = 'Breakfast_page/index.html';
+                } else if (filter === 'lunch') {
+                    window.location.href = 'Lunch_page/index.html';
+                } else if (filter === 'dinner') {
+                    window.location.href = 'Dinner_page/index.html';
+                } else if (filter === 'dessert') {
+                    window.location.href = 'Dessert_page/index.html';
+                } else if (filter === 'smoothie') {
+                    window.location.href = 'Smoothie_page/index.html';
+                } else {
+                    // For "All" tab, keep the current filtering behavior
+                    // Remove active class from all tabs
+                    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show all recipes
+                    const cards = document.querySelectorAll('.card');
+                    cards.forEach(card => {
                         card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                    });
+                }
             });
         });
     </script>
