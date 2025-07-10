@@ -83,7 +83,7 @@ body {
 }
 
 /* Hero Section with Background Image - Updated */
-/* Hero Section with Background Image - Center-Left Aligned */
+/* Hero Section with Background Image - Better Centered */
 .hero-section {
     background: url('../Homepage/Hero_Background.png') center/cover no-repeat;
     background-size: cover;
@@ -95,7 +95,7 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
-    padding: 4rem 0;
+    padding: 4rem 2rem;
 }
 
 .hero-section::before {
@@ -112,20 +112,24 @@ body {
 .hero-container {
     position: relative;
     z-index: 2;
-    max-width: 1200px;
+    max-width: 900px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    max-width: 700px;
+    gap: 2rem;
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
+    padding: 2rem;
 }
 
 .hero-title {
@@ -536,52 +540,67 @@ body {
 /* Remove the duplicate .hero class at the bottom of the file (lines 700-720) */
 /* Keep only the .hero-section styles above */
 
-/* Responsive Design for Left Alignment */
+/* Responsive Design for Better Centering */
 @media (max-width: 768px) {
     .hero-section {
         min-height: 60vh;
-        padding: 3rem 0;
-        text-align: left;
-        justify-content: flex-start;
+        padding: 3rem 1rem;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .hero-container {
+        padding: 0 20px;
+        max-width: 100%;
     }
     
     .hero-content {
-        align-items: flex-start;
+        align-items: center;
         max-width: 100%;
-        text-align: left;
+        text-align: center;
+        padding: 1.5rem;
     }
     
     .hero-title {
         font-size: 2.5rem;
-        text-align: left;
+        text-align: center;
     }
     
     .hero-subtitle {
         font-size: 1.1rem;
-        text-align: left;
+        text-align: center;
+        max-width: 100%;
     }
     
     .explore-btn {
         padding: 1rem 2rem;
         font-size: 1rem;
-        align-self: flex-start;
+        align-self: center;
     }
 }
 
 @media (max-width: 480px) {
     .hero-section {
         min-height: 50vh;
-        padding: 2rem 0;
-        justify-content: flex-start;
+        padding: 2rem 0.5rem;
+        justify-content: center;
+    }
+    
+    .hero-container {
+        padding: 0 15px;
+    }
+    
+    .hero-content {
+        padding: 1rem;
     }
     
     .hero-title {
         font-size: 2rem;
-        text-align: left;
+        text-align: center;
     }
     
     .hero-subtitle {
         font-size: 1rem;
-        text-align: left;
+        text-align: center;
     }
 }
