@@ -362,12 +362,14 @@
   background-image: url('Hero_Background.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 40px;
+  /* Removed any background-color properties */
 }
 
 .hero-content {
