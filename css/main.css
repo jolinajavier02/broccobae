@@ -82,8 +82,7 @@ body {
     min-height: 100vh;
 }
 
-/* Hero Section with Background Image - Updated */
-/* Hero Section with Background Image - Better Centered */
+/* Hero Section with Background Image - Single Line Layout */
 .hero-section {
     background: url('../Homepage/Hero_Background.png') center/cover no-repeat;
     background-size: cover;
@@ -112,7 +111,7 @@ body {
 .hero-container {
     position: relative;
     z-index: 2;
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     padding: 0 40px;
@@ -126,8 +125,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
     padding: 2rem;
 }
@@ -140,6 +138,9 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1.2;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .hero-subtitle {
@@ -149,6 +150,10 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     line-height: 1.4;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 .explore-btn {
@@ -163,6 +168,7 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     align-self: center;
+    margin-top: 1rem;
 }
 
 .explore-btn:hover {
@@ -537,16 +543,21 @@ body {
     z-index: 1;
 }
 
-/* Remove the duplicate .hero class at the bottom of the file (lines 700-720) */
-/* Keep only the .hero-section styles above */
+/* Responsive Design for Single Line Layout */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
 
-/* Responsive Design for Better Centering */
 @media (max-width: 768px) {
     .hero-section {
         min-height: 60vh;
         padding: 3rem 1rem;
-        text-align: center;
-        justify-content: center;
     }
     
     .hero-container {
@@ -555,27 +566,26 @@ body {
     }
     
     .hero-content {
-        align-items: center;
-        max-width: 100%;
-        text-align: center;
         padding: 1.5rem;
     }
     
     .hero-title {
         font-size: 2.5rem;
-        text-align: center;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
     }
     
     .hero-subtitle {
         font-size: 1.1rem;
-        text-align: center;
-        max-width: 100%;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
     }
     
     .explore-btn {
         padding: 1rem 2rem;
         font-size: 1rem;
-        align-self: center;
     }
 }
 
@@ -583,7 +593,6 @@ body {
     .hero-section {
         min-height: 50vh;
         padding: 2rem 0.5rem;
-        justify-content: center;
     }
     
     .hero-container {
@@ -596,11 +605,9 @@ body {
     
     .hero-title {
         font-size: 2rem;
-        text-align: center;
     }
     
     .hero-subtitle {
         font-size: 1rem;
-        text-align: center;
     }
 }
