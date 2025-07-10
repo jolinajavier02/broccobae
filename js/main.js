@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Recipe filtering
     const filterTabs = document.querySelectorAll('.filter-tab');
     const recipeCards = document.querySelectorAll('.recipe-card[data-category]');
+    const mealPlanCards = document.querySelectorAll('.meal-plan-card[data-category]');
     
+    // Handle recipe and meal plan filtering
     filterTabs.forEach(tab => {
         tab.addEventListener('click', function() {
             const filter = this.getAttribute('data-filter');
@@ -14,6 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Filter recipes
             recipeCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Filter meal plans
+            mealPlanCards.forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.style.display = 'block';
                 } else {
@@ -61,28 +72,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add meal plan filtering functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        // Meal plan filtering
-        const mealPlanCards = document.querySelectorAll('.meal-plan-card[data-category]');
-        
-        filterTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const filter = this.getAttribute('data-filter');
-                
-                // Update active tab
-                filterTabs.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Filter meal plans
-                mealPlanCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
+    // Add click handlers for CTA buttons
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Add your CTA functionality here
+            console.log('CTA button clicked:', this.textContent);
         });
     });
+    
+    // Add navigation functionality
+    const navLinks = document.querySelectorAll('.navigation a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Remove active class from all nav items
+            navLinks.forEach(l => l.classList.remove('active'));
+            // Add active class to clicked item
+            this.classList.add('active');
+        });
+    });
+    
+    // Error handling for missing elements
+    if (filterTabs.length === 0) {
+        console.warn('No filter tabs found on this page');
+    }
+    if (recipeCards.length === 0) {
+        console.warn('No recipe cards found on this page');
+    }
 });
