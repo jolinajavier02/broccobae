@@ -268,6 +268,7 @@ body {
 
 .article-content {
     flex: 1;
+    text-align: left;
 }
 
 .article-title {
@@ -298,6 +299,7 @@ body {
     object-fit: cover;
     border-radius: 10px;
     flex-shrink: 0;
+    order: 2;
 }
 
 /* Remove the old scrolling articles container styles */
