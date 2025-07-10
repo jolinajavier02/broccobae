@@ -606,7 +606,7 @@
   }
 }
 
-/* Latest Articles - Updated Styling */
+/* Latest Articles - Updated Styling with Right-Aligned Images */
 .article-title {
     font-size: 1.4rem;
     font-weight: 700;
@@ -638,28 +638,84 @@
     margin-bottom: 1rem;
 }
 
-/* Article Image Styling */
+/* Article Image - Fixed Size and Right Alignment */
 .article-image {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    flex-shrink: 0;
 }
 
-/* Article Container for Better Layout */
+/* Article Container - Horizontal Layout with Image on Right */
 .article-item {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
     padding: 1rem;
     background: white;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .article-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Article Content - Text Content on Left */
+.article-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Article Image Container - Image on Right */
+.article-image-container {
+    order: 2;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Responsive Design for Articles */
+@media (max-width: 768px) {
+    .article-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .article-image {
+        width: 100%;
+        height: 200px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .article-image-container {
+        order: 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-image {
+        height: 150px;
+    }
+    
+    .article-item {
+        padding: 0.75rem;
+    }
+    
+    .article-title {
+        font-size: 1.2rem;
+    }
+    
+    .article-description {
+        font-size: 0.9rem;
+    }
 }
