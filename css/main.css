@@ -274,7 +274,7 @@ body {
 .article-title {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #09713D;
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
@@ -294,6 +294,7 @@ body {
     line-height: 1.6;
 }
 
+/* Remove the duplicate conflicting styles below */
 .article-image {
     width: 150px;
     height: 150px;
