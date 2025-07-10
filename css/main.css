@@ -111,7 +111,7 @@ body {
 .hero-container {
     position: relative;
     z-index: 2;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 0 40px;
@@ -139,8 +139,10 @@ body {
     line-height: 1.2;
     text-align: center;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: visible;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-subtitle {
@@ -151,9 +153,10 @@ body {
     line-height: 1.4;
     text-align: center;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+    overflow: visible;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .explore-btn {
@@ -544,13 +547,33 @@ body {
 }
 
 /* Responsive Design for Single Line Layout */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .hero-title {
         font-size: 3rem;
     }
     
     .hero-subtitle {
         font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
     }
 }
 
@@ -570,17 +593,11 @@ body {
     }
     
     .hero-title {
-        font-size: 2.5rem;
-        white-space: normal;
-        overflow: visible;
-        text-overflow: unset;
+        font-size: 1.8rem;
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
-        white-space: normal;
-        overflow: visible;
-        text-overflow: unset;
+        font-size: 0.9rem;
     }
     
     .explore-btn {
@@ -604,10 +621,10 @@ body {
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
