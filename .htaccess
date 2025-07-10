@@ -1,4 +1,5 @@
 RewriteEngine On
+<<<<<<< HEAD
 
 # Clean URL routes
 RewriteRule ^home/?$ index.html [L]
@@ -16,3 +17,25 @@ RewriteRule ^Community_Page/index\.html$ /community [R=301,L]
 
 # Handle trailing slashes
 RewriteRule ^([^/]+)/$ /$1 [R=301,L]
+=======
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Additional rules for clean URLs and SEO
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^home/?$ index.html [L]
+RewriteRule ^recipes/?$ Recipe_Page/index.html [L]
+RewriteRule ^meal-plans/?$ Meal_Plans/index.html [L]
+RewriteRule ^cuisines/?$ Cuisine_Page/index.html [L]
+RewriteRule ^community/?$ Community_Page/index.html [L]
+
+# Redirect old HTML file paths to clean URLs
+RewriteCond %{THE_REQUEST} /([^.\s]+)\.html[\s?] [NC]
+RewriteRule ^ /%1? [R=301,L]
+
+# Handle trailing slashes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+>>>>>>> 3012ba16d9e35c54c952c6e0b4382fc793f965f5

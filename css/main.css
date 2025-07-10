@@ -84,7 +84,11 @@ body {
 
 /* Hero Section with Background Image */
 .hero-section {
+<<<<<<< HEAD
     background: url('../Homepage/Hero_Background.png') center/cover no-repeat;
+=======
+    background: url('../Homepage/vegan_burger_hero.png') center/cover no-repeat;
+>>>>>>> 3012ba16d9e35c54c952c6e0b4382fc793f965f5
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -291,7 +295,7 @@ body {
 .article-title {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #09713D;
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
@@ -311,6 +315,7 @@ body {
     line-height: 1.6;
 }
 
+/* Remove the duplicate conflicting styles below */
 .article-image {
     width: 150px;
     height: 150px;
@@ -320,7 +325,7 @@ body {
     order: 2;
 }
 
-/* Remove the old scrolling articles container styles */
+/* Remove the duplicate conflicting styles */
 .articles-container {
     display: none;
 }
