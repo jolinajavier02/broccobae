@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - broccobae</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header-wrapper">
+            <div class="header">
+                <div class="logo-section">
+                    <img class="logo-img" src="../Homepage/Logo_Icon/icon.png" alt="Broccobae Logo" />
+                    <div class="logo-text">
+                        <div class="broccobae">broccobae</div>
+                    </div>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="navigation">
+                        <div class="nav-item">
+                            <a href="/" class="home">Home</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="/recipes" class="recipes">Recipes</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="/meal-plans" class="meal-plans">Meal Plans</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="/cuisines" class="cuisines">Cuisines</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="/community" class="community active">Community</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="section">
+                <div class="section-title">Community Favorites</div>
+                <div class="section-description">Discover seasonal recipes and community picks that bring people together</div>
+                
+                <!-- Community Filter Tabs -->
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="summer">Summer Specials</button>
+                    <button class="filter-tab" data-filter="winter">Winter Warmers</button>
+                    <button class="filter-tab" data-filter="festive">Festive Vegan</button>
+                    <button class="filter-tab" data-filter="monsoon">Monsoon Comforts</button>
+                </div>
+                
+                <div class="grid" id="community-grid">
+                    <!-- Summer Specials -->
+                    <div class="card" data-category="summer">
+                        <img src="../Community_Page/Summer_Specials/Summer_Salads.png" alt="Summer Salads" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Summer Salads</h3>
+                            <p class="card-description">Fresh and crisp salads perfect for hot summer days</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="summer">
+                        <img src="../Community_Page/Summer_Specials/Summer_Drinks.png" alt="Summer Drinks" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Summer Drinks</h3>
+                            <p class="card-description">Refreshing beverages to keep you cool and hydrated</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="summer">
+                        <img src="../Community_Page/Summer_Specials/Summer_BBQ.png" alt="Summer BBQ" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Summer BBQ</h3>
+                            <p class="card-description">Plant-based grilling recipes for outdoor gatherings</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="summer">
+                        <img src="../Community_Page/Summer_Specials/Summer_Desserts.png" alt="Summer Desserts" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Summer Desserts</h3>
+                            <p class="card-description">Light and fruity desserts for summer celebrations</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Winter Warmers -->
+                    <div class="card" data-category="winter">
+                        <img src="../Community_Page/Winter_Warmers/Winter_Soup.png" alt="Winter Soup" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Winter Soups</h3>
+                            <p class="card-description">Hearty and warming soups for cold winter nights</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="winter">
+                        <img src="../Community_Page/Winter_Warmers/Winter_Comfort_Foods.png" alt="Winter Comfort Foods" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Winter Comfort Foods</h3>
+                            <p class="card-description">Cozy and satisfying meals to warm your soul</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="winter">
+                        <img src="../Community_Page/Winter_Warmers/Winter_Drinks.png" alt="Winter Drinks" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Winter Drinks</h3>
+                            <p class="card-description">Hot beverages to keep you warm and cozy</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="winter">
+                        <img src="../Community_Page/Winter_Warmers/Winter_Bakes.png" alt="Winter Bakes" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Winter Bakes</h3>
+                            <p class="card-description">Warm baked goods perfect for winter gatherings</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Festive Vegan -->
+                    <div class="card" data-category="festive">
+                        <img src="../Community_Page/Festive_Vegan/Holiday_Roast.png" alt="Holiday Roast" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Holiday Roast</h3>
+                            <p class="card-description">Impressive centerpiece dishes for special occasions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="festive">
+                        <img src="../Community_Page/Festive_Vegan/Holiday_Sides.png" alt="Holiday Sides" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Holiday Sides</h3>
+                            <p class="card-description">Delicious side dishes to complement your festive meals</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="festive">
+                        <img src="../Community_Page/Festive_Vegan/Holiday_Desserts.png" alt="Holiday Desserts" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Holiday Desserts</h3>
+                            <p class="card-description">Sweet treats to end your celebrations perfectly</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="festive">
+                        <img src="../Community_Page/Festive_Vegan/Holiday_Drinks.png" alt="Holiday Drinks" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Holiday Drinks</h3>
+                            <p class="card-description">Festive beverages for toasting special moments</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Monsoon Comforts -->
+                    <div class="card" data-category="monsoon">
+                        <img src="../Community_Page/Monsoon_Comforts/Monsonn_Curries.png" alt="Monsoon Curries" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Monsoon Curries</h3>
+                            <p class="card-description">Spicy and warming curries perfect for rainy days</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="monsoon">
+                        <img src="../Community_Page/Monsoon_Comforts/Monsoon_Snacks.png" alt="Monsoon Snacks" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Monsoon Snacks</h3>
+                            <p class="card-description">Crispy and savory snacks to enjoy with tea</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="monsoon">
+                        <img src="../Community_Page/Monsoon_Comforts/Monsoon_Drinks.png" alt="Monsoon Drinks" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Monsoon Drinks</h3>
+                            <p class="card-description">Warm beverages to brighten up gloomy days</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-category="monsoon">
+                        <img src="../Community_Page/Monsoon_Comforts/Monsoon_Desserts.png" alt="Monsoon Desserts" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Monsoon Desserts</h3>
+                            <p class="card-description">Comforting sweets to lift your spirits</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/recipes">Recipes</a></li>
+                            <li><a href="/meal-plans">Meal Plans</a></li>
+                            <li><a href="/cuisines">Cuisines</a></li>
+                            <li><a href="/community">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Our Values</a></li>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <p>Email: info@broccobae.com</p>
+                        <p>Phone: +81 70-1234-5678</p>
+                        <p>Location: Saitama, Japan</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><img src="../Homepage/Vector/Facebook.svg" alt="Facebook"></a>
+                            <a href="#"><img src="../Homepage/Vector/Instagram.svg" alt="Instagram"></a>
+                            <a href="#"><img src="../Homepage/Vector/Twitter.svg" alt="Twitter"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Broccobae. All rights reserved. Thank you for choosing plant-based nutrition!</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+    // Community filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active tab
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter cards
+                const cards = document.querySelectorAll('.card');
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+    </script>
+</body>
+</html>
