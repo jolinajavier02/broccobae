@@ -105,7 +105,15 @@
             <div class="ad-section">
                 <div class="advertisement-title">Advertisement</div>
                 <div class="ad-container">
-                    <img class="ad-image" src="Advertisement/Exclusive_Vegan_Event.png" alt="Exclusive Vegan Event" />
+                    <!-- Fix advertisement image path -->
+                    <img class="ad-image" src="../Recipe_Page/Advertisement/Exclusive_Vegan_Event.png" alt="Exclusive Vegan Event" />
+                    
+                    <!-- Fix recipe image paths -->
+                    <img src="../Recipe_Page/All_Recipes/Avocado_Toast_with_Everything_Bagel_Seasoning.png" alt="Avocado Toast" class="card-image">
+                    <img src="../Recipe_Page/All_Recipes/Quinoa _Salad_with_Lemon_Vinaigrette.png" alt="Quinoa Salad" class="card-image">
+                    <img src="../Recipe_Page/All_Recipes/Spicy_Black_Bean_Burgers.png" alt="Black Bean Burgers" class="card-image">
+                    <img src="../Recipe_Page/All_Recipes/Chocolate_Avocado_Mousse.png" alt="Chocolate Mousse" class="card-image">
+                    <img src="../Recipe_Page/All_Recipes/Avocado_Banana_Smoothie.png" alt="Avocado Banana Smoothie" class="card-image">
                     <div class="ad-text">
                         <div class="advertisement-subtitle">Exclusive Vegan Event</div>
                         <div class="advertisement-description">Join our exclusive vegan event featuring cooking demos, workshops, and more. Register today!</div>
@@ -125,8 +133,8 @@
                             <li><a href="../index.html">Home</a></li>
                             <li><a href="index.html">Recipes</a></li>
                             <li><a href="../Meal_Plans/index.html">Meal Plans</a></li>
-                            <li><a href="../Cuisine_Page/index.html">Cuisines</a></li>
-                            <li><a href="../Community_Page/index.html">Community</a></li>
+                            <li><a href="../Cuisines/index.html">Cuisines</a></li>
+                            <li><a href="../Community/index.html">Community</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
@@ -159,36 +167,5 @@
             </div>
         </footer>
     </div>
-    
-    <script>
-        // Recipe filter functionality
-        document.querySelectorAll('.filter-tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                const filter = this.getAttribute('data-filter');
-                
-                // Navigate to category pages for specific categories
-                if (filter === 'breakfast') {
-                    window.location.href = '/recipes/breakfast';
-                } else if (filter === 'lunch') {
-                    window.location.href = '/recipes/lunch';
-                } else if (filter === 'dinner') {
-                    window.location.href = '/recipes/dinner';
-                } else if (filter === 'dessert') {
-                    window.location.href = '/recipes/dessert';
-                } else if (filter === 'smoothie') {
-                    window.location.href = '/recipes/smoothie';
-                } else {
-                    // For "All" tab, keep the current filtering behavior
-                    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    const cards = document.querySelectorAll('.card');
-                    cards.forEach(card => {
-                        card.style.display = 'block';
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
