@@ -235,10 +235,10 @@
                                 <h3>Quick Links</h3>
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="Recipe_Page/index.html">Recipes</a></li>
+                                    <li><a href="recipes/index.html">Recipes</a></li>
                                     <li><a href="Meal_Plans/index.html">Meal Plans</a></li>
-                                    <li><a href="Cuisine_Page/index.html">Cuisines</a></li>
-                                    <li><a href="Community_Page/index.html">Community</a></li>
+                                    <li><a href="Cuisines/index.html">Cuisines</a></li>
+                                    <li><a href="Community/index.html">Community</a></li>
                                 </ul>
                             </div>
                             <div class="footer-section">
@@ -274,18 +274,18 @@
         </div>
     </div>
     <script>
-    // Simple client-side routing
+    // Updated client-side routing
     function handleNavigation() {
         const path = window.location.pathname;
         
         if (path === '/recipes') {
-            window.location.href = 'Recipe_Page/index.html';
+            window.location.href = 'recipes/index.html';
         } else if (path === '/meal-plans') {
-            window.location.href = 'Meal_Plans/index.html';
+            window.location.href = 'Meal_Plans/index.html'; // Use existing working folder
         } else if (path === '/cuisines') {
-            window.location.href = 'Cuisine_Page/index.html';
+            window.location.href = 'Cuisines/index.html'; // Use existing working folder
         } else if (path === '/community') {
-            window.location.href = 'Community_Page/index.html';
+            window.location.href = 'Community/index.html'; // Use existing working folder
         }
     }
     
