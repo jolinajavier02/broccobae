@@ -201,20 +201,47 @@
     </div>
     
     <script>
-        // Community tab functionality
-        document.querySelectorAll('.community-tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                const targetTab = this.getAttribute('data-tab');
+// Community tab functionality and navigation
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle navigation clicks
+    document.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            const href = e.target.getAttribute('href');
+            
+            // Handle clean URL navigation links
+            if (href && href.startsWith('/')) {
+                e.preventDefault();
                 
-                // Remove active class from all tabs and content
-                document.querySelectorAll('.community-tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                // Add active class to clicked tab and corresponding content
-                this.classList.add('active');
-                document.getElementById(targetTab).classList.add('active');
-            });
+                if (href === '/') {
+                    window.location.href = '../index.html';
+                } else if (href === '/recipes') {
+                    window.location.href = '../recipes/index.html';
+                } else if (href === '/meal-plans') {
+                    window.location.href = '../Meal_Plans/index.html';
+                } else if (href === '/cuisines') {
+                    window.location.href = '../Cuisines/index.html';
+                } else if (href === '/community') {
+                    window.location.href = 'index.html';
+                }
+            }
+        }
+    });
+    
+    // Community tab functionality
+    document.querySelectorAll('.community-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all tabs and content
+            document.querySelectorAll('.community-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            this.classList.add('active');
+            document.getElementById(targetTab).classList.add('active');
         });
-    </script>
+    });
+});
+</script>
 </body>
 </html>
